@@ -1,13 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-body{
+
+body {
     background: #bbc6fa;
 }
-.quote-box{
+
+.quote-box {
     background: #fff;
     width: 700px;
     position: absolute;
@@ -17,16 +19,16 @@ body{
     padding: 40px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.quote-box h2{
-    font-size: 32px;
+.quote-box h2 {
+    font-size: 2rem;
     margin-bottom: 40px;
     position: relative;
 }
 
-.quote-box h2::after{
+.quote-box h2::after {
     content: '';
     width: 75px;
     height: 3px;
@@ -38,22 +40,24 @@ body{
     transform: translateX(-50%);
 }
 
-.quote-box blockquote{
-    font-size: 26px;
+.quote-box blockquote {
+    font-size: 1.6rem;
     min-height: 110px;
 }
-.quote-box blockquote::before, .quote-box blockquote::after{
+
+.quote-box blockquote::before,
+.quote-box blockquote::after {
     content: ' " ';
 }
 
-.quote-box span{
+.quote-box span {
     display: block;
     margin-top: 10px;
     float: right;
     position: relative;
 }
 
-.quote-box span::before{
+.quote-box span::before {
     content: '';
     width: 20px;
     height: 2px;
@@ -63,15 +67,14 @@ body{
     left: -30px;
 }
 
-.quote-box div{
+.quote-box div {
     width: 100%;
     margin-top: 50px;
     display: flex;
     justify-content: center;
-
 }
 
-.quote-box button{
+.quote-box button {
     background: rgb(0, 0, 0);
     color: #fff;
     border-radius: 25px;
@@ -85,12 +88,22 @@ body{
     cursor: pointer;
 }
 
-.quote-box button img{
-    width: 50px;
+.quote-box button:hover {
+    background: #000000b3;
+    transition: background 0.3s;
+    color: rgb(255, 255, 255);
 }
 
-.quote-box button:nth-child(2){
-    background: transparent;
-    color: black;
-    border-color: black;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quote-box {
+        width: 90%;
+        padding: 20px;
+    }
+    .quote-box h2 {
+        font-size: 1.8rem;
+    }
+    .quote-box blockquote {
+        font-size: 1.4rem;
+    }
 }
